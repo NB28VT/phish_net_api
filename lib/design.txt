@@ -27,6 +27,8 @@ Concert Song
 - timestamps
 
 Concert
+
+CONSIDER CHANGING DATE!!!
 - has_many songs, through concert song
 - Has venue, string for now
 - Month

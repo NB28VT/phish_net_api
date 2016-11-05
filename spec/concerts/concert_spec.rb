@@ -2,14 +2,28 @@ require "rails_helper"
 
 RSpec.describe "Concert", :type => :model do
   it "gets created with a date and a venue" do
-    concert = Concert.create(
-      venue: "Saratoga Springs Performing Arts Center",
-      month: "7",
-      date: "5",
-      year: "2013"
-    )
-
+    concert = FactoryGirl.build(:concert)
     expect(concert).to be_valid
+  end
+
+  it "does not get created without a venue" do
+    concert = FactoryGirl.build(:concert, venue: nil)
+    expect(concert).to_not be_valid
+  end
+
+  it "does not get created without a month" do
+    concert = FactoryGirl.build(:concert, month: nil)
+    expect(concert).to_not be_valid
+  end
+
+  it "does not get created without a date" do
+    concert = FactoryGirl.build(:concert, date: nil)
+    expect(concert).to_not be_valid
+  end
+
+  it "does not get created without a year" do
+    concert = FactoryGirl.build(:concert, year: nil)
+    expect(concert).to_not be_valid
   end
 
 end
