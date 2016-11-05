@@ -26,4 +26,11 @@ RSpec.describe "Concert", :type => :model do
     expect(concert).to_not be_valid
   end
 
+  it "returns a list of songs for that show" do
+    concert = FactoryGirl.create(:concert)
+    song = FactoryGirl.build(:song)
+    concert.songs.create(song)
+    expect(concert.songs.count).to_eq(1)
+  end
+
 end
