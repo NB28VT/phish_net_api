@@ -40,4 +40,8 @@ CONSIDER CHANGING DATE!!!
 
 
 
+Dumb data:
+Concert.create()
+
+
 
