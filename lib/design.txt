@@ -1,0 +1,41 @@
+Admin
+
+
+
+Endpoints:
+
+Song:
+Index
+Show
+
+Concert
+Index with params (like by year)
+Show
+
+
+
+Song
+- has_many concerts, through concert song
+- name
+- play count (concert songs)
+- timestamps
+
+Concert Song
+- concert id
+- song id
+- set number (1, 2, or 3)
+- timestamps
+
+Concert
+- has_many songs, through concert song
+- Has venue, string for now
+- Month
+- Date
+- Year
+- timestamps
+
+
+
+
+
+
